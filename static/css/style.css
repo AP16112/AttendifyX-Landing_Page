@@ -77,13 +77,13 @@ break-word → Allows the browser to break long words at arbitrary points if the
 }
 
 .logo img {
-    height: 38px;
+    height: 40px;
     width: auto;      /* so it will take width automatically as per height*/
 }
 
 .logo-text {
     font-family: 'Fugaz One', sans-serif;
-    font-size: 1.65rem;
+    font-size: 1.8rem;
     color: white;
     line-height: 0.6;
     font-weight: 600;
@@ -247,4 +247,124 @@ break-word → Allows the browser to break long words at arbitrary points if the
 .card-right {
     right: 40px;
     bottom: 25%;
+}
+
+
+
+
+
+
+
+/* Purple Section */
+.purple-section {
+    background-color: var(--primary);
+    color: white;
+    padding: 100px 80px;
+    text-align: center;
+    border-radius: 80px;
+    margin: 40px;
+}
+
+.purple-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.purple-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--primary);
+    padding: 18px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.btn-white:hover {
+    opacity: 0.9;
+}
+
+
+/* Styling Footer  */
+/* Main Footer */
+.main-footer {
+    padding: 100px 80px 40px;
+    background-color: #000000;
+    border-top: 1px solid #333333;
+    color: white;
+}
+
+
+.main-footer .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+/* grid-template-columns → sets the number and size of columns in a grid container.
+fr (fraction unit) → divides available space into proportional parts.
+e.g. Imagine the container is 800px wide: Total fractions = 2 + 1 + 1 + 1 = 5 , Each fraction = 800 ÷ 5 = 160px
+Column widths:
+First column → 2 × 160 = 320px
+Second column → 160px
+Third column → 160px
+Fourth column → 160px */
+
+
+.footer-brand .logo {
+    margin-bottom: 24px;
+}
+
+.footer-brand p {
+    color: #cccccc;
+    font-size: 1rem;
+    max-width: 320px;
+    line-height: 1.6;
+}
+
+.footer-brand .logo-text {
+    color: #ffffff;
+}
+
+.footer-links ul {
+    list-style: none;   /* removes the default bullet points (or numbering if it were an <ol>).*/
+}
+
+.footer-links li {
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid #333333;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #999999;
+    font-size: 0.95rem;
+    font-weight: 500;
 }
