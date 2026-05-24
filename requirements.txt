@@ -1,0 +1,12 @@
+# Here we need to named this file as "requirements.txt" only because it is convention
+# As during deployment, this 'requirements.txt' file is required to install all the libraries  
+# A requirements.txt file is used to list all the Python packages your project depends on, so anyone can recreate the same environment easily.
+
+# To recreate the environment on another machine :-
+#---------------OR---------------------
+# To install the libraries that we want, we can write them in this "requirements.txt" file then do this :-
+# pip install -r requirements.txt
+
+# As here we will use flask for creating this home page for our 'AttendifyX' project
+flask
+
