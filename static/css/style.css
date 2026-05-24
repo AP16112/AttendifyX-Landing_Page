@@ -250,6 +250,60 @@ break-word → Allows the browser to break long words at arbitrary points if the
 }
 
 
+/* Features Section */
+.features {
+    padding: 120px 80px;
+    background-color: white;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 4.5rem;
+    margin-bottom: 60px;
+    color: black;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    /* Creates 3 equal-width columns */
+    gap: 40px;
+    max-width: 1200px;    /* Restricts the grid’s maximum width */
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 60px 40px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.f-icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: #f8faff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 3rem;      /* It will make the emoji bigger in size now*/
+}
+
+.feature-card h3 {
+    font-size: 1.6rem;
+    color: black;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
 
 
 
