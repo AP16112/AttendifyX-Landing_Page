@@ -28,8 +28,13 @@
 
         <div class="nav-links">
             <a href="#">Home</a>.
+            <!-- href="#" means the link points to the top of the current page (the empty fragment identifier).
+            When clicked, the browser will jump to the very beginning of the page (or reload the page if no id matches). -->
             <a href="#features">Features</a>.
+            <!-- The href="#features" tells the browser: → “Jump to the element on this page with the id="features".”
+            When the user clicks Features, the page will scroll directly to the section that has that ID. -->
             <a href="#journey">Journey</a>.
+            <!-- The href="#journey" points to an element on the same page that has the attribute id="journey". When clicked, the browser will scroll (or jump) directly to that element. -->
             <a href="#tech">Tech Stack</a>.
         </div>
 
@@ -107,14 +112,70 @@
 
 
 
+    <!-- TechStack Section -->
+    <section id="tech" class="tech-stack">
+        <!-- Here we must need to give the id="tech" here for this section so that href="#tech" will work & take user to this section -->
+        <div class="section-tag"> -- Our Backend -- </div>
+        
+        <h2>Advanced Tech Stack</h2>
 
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">⚡</div>
+                    <div class="tech-info">
+                        <h4>Streamlit & Flask</h4>
+                        <p>Reactive frontend architecture paired with a robust Flask landing layer.</p>
+                    </div>
+                    <span class="tech-tag">Platform</span>
+                </div>
+            </div>
+
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">👁️</div>
+                    <div class="tech-info">
+                        <h4>Face Registration</h4>
+                        <p>Leveraging FaceRecognition and Dlib for high-fidelity facial biometrics.</p>
+                    </div>
+                    <span class="tech-tag">Vision AI</span>
+                </div>
+            </div>
+
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">🎙️</div>
+                    <div class="tech-info">
+                        <h4>Voice Embeddings</h4>
+                        <p>Utilizing Resemblyzer and Librosa for unique student voice signatures.</p>
+                    </div>
+                    <span class="tech-tag">Audio AI</span>
+                </div>
+            </div>
+
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">☁️</div>
+                    <div class="tech-info">
+                        <h4>Supabase Cloud</h4>
+                        <p>Real-time PostgreSQL infrastructure with secure auth and sync.</p>
+                    </div>
+                    <span class="tech-tag">Storage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Purple Section  -->
     <section class="purple-section">
         <h2>Ready to upgrade your classroom?</h2>
         <p>Join thousands of educators who have simplified their day with AttendifyX. The smartest & intelligent AI powered attendance system is just one click away.</p>
         <a href="https://snapclass.streamlit.app/" class="btn-white">Start AI Attendance Now</a>
     </section>
 
-
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-grid">
             <div class="footer-brand">
