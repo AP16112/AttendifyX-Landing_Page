@@ -33,8 +33,8 @@
             <a href="#features">Features</a>.
             <!-- The href="#features" tells the browser: → “Jump to the element on this page with the id="features".”
             When the user clicks Features, the page will scroll directly to the section that has that ID. -->
-            <a href="#journey">Journey</a>.
-            <!-- The href="#journey" points to an element on the same page that has the attribute id="journey". When clicked, the browser will scroll (or jump) directly to that element. -->
+            <a href="#teacher-journey">Journey</a>.
+            <!-- The href="#teacher-journey" points to an element on the same page that has the attribute id="teacher-journey". When clicked, the browser will scroll (or jump) directly to that element. -->
             <a href="#tech">Tech Stack</a>.
         </div>
 
@@ -67,7 +67,7 @@
                 <!-- Here this this SVG is a decorative icon next to the “Start AI Attendance” text. It is just used to add this upright right arrow icon here-->
             </a>
 
-            <a href="#journey" class="link-action">Explore Journey</a>
+            <a href="#teacher-journey" class="link-action">Explore Journey</a>
         </div>
 
         <div class="floating-card card-left">
@@ -109,6 +109,88 @@
         </div>
     </section>
 
+
+    <!-- Journey Section -->
+    <!-- Teacher's Journey Section -->
+    <!-- Here we must need to give the id="teacher-journey" here for this section so that href="#teacher-journey" will work & take user to this section -->
+    <section id="teacher-journey"  class="teacher-flow">
+        <div class="flow-container">
+            <div class="section-tag"  style="text-align: center;  color: black; display: block; font-size: 1.2rem; font-weight: 600; margin-bottom: 40px;"> -- Workflow -- </div>
+            <h2 style="text-align: center;  font-size: 3.5rem;  color: black; margin-bottom: 80px;">The Teacher's Journey</h2>
+        
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">STEP 01</span>
+                    <h3>Secure Login</h3>
+                    <p>Start your session with our high-security authentication portal. Your data is encrypted and synced across all your devices.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-1-login.png') }}" alt="Login Portal">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">STEP 02</span>
+                    <h3>Interactive Dashboard</h3>
+                    <p>Manage all your subjects, attendance logs, and student rosters from a single, beautiful unified stream.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-2-teacher-dashboard.png') }}" alt="Teacher Dashboard">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">STEP 03</span>
+                    <h3>Course Management</h3>
+                    <p>Creating a new subject is a breeze. Just name it, and SnapClass generates everything you need to start tracking.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-3-create-course.png') }}" alt="Create Course">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">STEP 04</span>
+                    <h3>FaceID Attendance</h3>
+                    <p>Use high-speed computer vision to scan the entire room. Our AI identifies every student from a single class photo in milliseconds.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-4-share-qr-or-link.png') }}" alt="FaceID Attendance">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">STEP 05</span>
+                    <h3>Voice ID Attendance</h3>
+                    <p>Switch to voice mode for a futuristic roll-call. Students speak sequentially, and our AI matches their unique voice signatures.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-5-see-stored-records.png') }}" alt="Voice Attendance">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">STEP 06</span>
+                    <h3>Actionable Records</h3>
+                    <p>Review and manage historical logs. View confidence scores, download CSV reports, and track long-term attendance trends.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-1-login.png') }}" alt="Records Management">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -168,6 +250,53 @@
 
 
 
+    <!-- Journey Section -->
+    <!-- Student's Journey Section -->
+    <section id="student-journey"  class="teacher-flow"  style="background-color: white;">
+        <div class="flow-container">
+            <div class="section-tag"  style="text-align: center;  color: black; display: block; font-size: 1.2rem; font-weight: 600; margin-bottom: 40px;"> -- Workflow -- </div>
+            <h2 style="text-align: center;  font-size: 3.5rem;  color: black; margin-bottom: 80px;">The Student's Journey</h2>
+        
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 01</span>
+                    <h3>Instant Enrollment</h3>
+                    <p>Students join courses in seconds using unique QR codes or course links provided by their teachers. No tedious sign-up forms.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-1-login.png') }}" alt="Student Enrollment">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 02</span>
+                    <h3>Biometric Registration</h3>
+                    <p>Students register their FaceID and VoiceID once. Our AI securely stores these biometrics for all future class sessions.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-2-teacher-dashboard.png') }}" alt="Biometric Registration">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 03</span>
+                    <h3>Student's Personal Dashboard</h3>
+                    <p>A unified view for students to track their attendance percentage across all subjects and receive real-time updates.</p>
+                </div>
+
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/AttendifyX-teacher-flow-3-create-course.png') }}" alt="Student Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Purple Section  -->
     <section class="purple-section">
         <h2>Ready to upgrade your classroom?</h2>
@@ -200,7 +329,7 @@
             <div class="footer-links">
                 <h4>Experience</h4>
                 <ul>
-                    <li><a href="#journey">Teacher Journey</a></li>
+                    <li><a href="#teacher-journey">Teacher Journey</a></li>
                     <li><a href="#student-journey">Student Journey</a></li>
                     <li><a href="#features">Voice ID Roll-call</a></li>
                     <li><a href="#features">FaceID Scan</a></li>

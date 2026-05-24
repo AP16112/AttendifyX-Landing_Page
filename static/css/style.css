@@ -217,7 +217,7 @@ break-word → Allows the browser to break long words at arbitrary points if the
 /* Floating Cards Simplified Styling*/
 .floating-card {
     position: absolute;
-    width: 320px;
+    width: 360px;
     background-color: #ffffff;
     padding: 14px;
     border-radius: 36px;
@@ -246,7 +246,7 @@ break-word → Allows the browser to break long words at arbitrary points if the
 
 .card-right {
     right: 40px;
-    bottom: 25%;
+    bottom: 20%;
 }
 
 
@@ -304,8 +304,85 @@ break-word → Allows the browser to break long words at arbitrary points if the
 }
 
 
+/* Teacher's Journey Section */
+/* Teacher Flow Section */
+.teacher-flow {
+    padding: 120px 80px 100px;
+    border-bottom: 1px solid white;
+}
 
+.flow-container {
+    max-width: 1200px;   /* Restricts the container’s width to a maximum of 1200px */
+    margin: 0 auto;      /* Centers the container horizontally in the viewport */
+}
+/* The container can shrink smaller on narrow screens, but it will never grow wider than 1200px.
+This keeps content readable and prevents it from stretching too much on large monitors.
+Commonly used in layouts to set a maximum content width for consistency. */
 
+.flow-step {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+
+.flow-content {
+    flex: 1;  /* It is using Flexbox shorthand to control how the .flow-content element behaves inside a flex container. */
+}
+
+/* What flex: 1; means :- It’s shorthand for:
+flex-grow: 1;    allow the item to grow and take available space 
+flex-shrink: 1;   allow the item to shrink if needed 
+flex-basis: 0;     start with 0 width/height before distributing space  
+In practice, it tells the browser: → “This element should expand to fill any remaining space in the flex container, sharing it equally with other flex items that also have flex: 1.” */
+
+.step-badge {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.flow-content h3 {
+    font-size: 3.2rem;
+    margin-bottom: 24px;
+    color: black;
+}
+
+.flow-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.flow-image {
+    flex: 1.4;
+    border-radius: 40px;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+/* What flex: 1.4; means :- It’s shorthand for flex-grow 1.4, flex-shrink 1, flex-basis 0.
+In a flex container, this tells the browser: → “Let this item grow to take up 1.4 parts of the available space compared to other flex items.” */
+
+/* Total shares = 1 + 1.4 = 2.4   inside a container having display: flex
+.flow-content gets 1/2.4 ≈ 41.7% of the space.
+.flow-image gets 1.4/2.4 ≈ 58.3% of the space.
+So .flow-image will be wider than .flow-content. */
+
+.flow-image img {
+    width: 100%;                        /* Image stretches to fill the container’s width */
+    height: auto;                       /* Height adjusts automatically to keep aspect ratio */
+    display: block;                     /* Removes inline spacing, makes it behave like a block */
+    transition: transform 0.3s ease;    /* Smoothly animates transform changes over 0.3s */
+}
+
+.flow-image:hover img {
+    transform: scale(1.02);    /* Slightly enlarges the image (2% zoom) on hover */
+}
 
 
 
@@ -387,6 +464,12 @@ break-word → Allows the browser to break long words at arbitrary points if the
     font-weight: 700;
     margin-top: 10px;
 }
+
+
+
+/* Student's Journey Section */
+/* Student Flow Section */
+
 
 
 
