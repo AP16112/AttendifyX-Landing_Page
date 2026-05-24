@@ -1,0 +1,250 @@
+/*Here we are importing some font-style from google font to use in this project*/
+/*We will use these fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+/* 
+:root selector defines global CSS variables (custom properties).
+These variables can be reused throughout the stylesheet.
+Variable name must start with -- in CSS
+*/
+:root {
+    --bg-main: #F0F4FF;   /* Define a custom variable named --bg-main with a light bluish color */
+    --primary: #5865F2;
+    --primary-dark: #4752C4;
+    --secondary: #EB459E;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border: #eef2f6;
+    --dot-color: #e5e7eb;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* By default, CSS uses box-sizing: content-box;. So, width and height apply only to the content area. Padding and borders are added on top of that, making the element bigger than expected.
+But with box-sizing: border-box;, The width and height include content + padding + border.
+The element will never grow beyond the size you set. */
+
+
+/* 
+The body element uses the custom variable for its background color.
+Instead of hardcoding the hex value, we reference the variable with var(--bg-main).
+This makes it easy to change the background color in one place (:root) and have it update everywhere.
+*/
+body {
+    background-color: var(--bg-main);   /* Apply the global background color variable to the page */
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;   /*It hides any content that overflows horizontally beyond the width of the element. Prevents horizontal scrollbars from appearing. The overflowing part is clipped and not visible.*/
+}
+
+
+/*Now we will override the font-style for default h3, h4, p, tags of streamlit*/
+h1, h2, h3, h4 {
+    font-family: 'Fugaz One', sans-serif;
+    line-height: 1.1;
+    word-break: break-word;    /* Control how long words wrap */
+}
+/* The word-break property controls how the browser handles line breaks inside words when text is too long to fit in its container.
+Default behavior (normal) → The browser tries to keep words intact, only breaking at spaces.
+break-word → Allows the browser to break long words at arbitrary points if they don’t fit, instead of overflowing outside the container. */
+
+
+/* Styling for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 80px;
+    background-color: #000000;
+    border-bottom: 1px solid #333333;
+    position: sticky;   /* Keeps the navbar "stuck" to a position while scrolling. Unlike fixed, it only sticks once you scroll past it. */
+    top: 0;             /* Defines the offset from the top of the viewport.Here, the navbar will stick to the very top. */
+    z-index: 1000;      /* Ensures the navbar stays above other elements. Higher z-index means it will overlap content below. */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 38px;
+    width: auto;      /* so it will take width automatically as per height*/
+}
+
+.logo-text {
+    font-family: 'Fugaz One', sans-serif;
+    font-size: 1.65rem;
+    color: white;
+    line-height: 0.6;
+    font-weight: 600;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+
+.btn-pill {
+    background-color: white;
+    color: #000000;
+    padding: 12px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;    /* Prevents line breaks → Text will stay on a single line, no matter how long it is. */
+}
+
+
+.btn-pill:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Hero Section i.e 1st Page */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 40px;
+    background-color: #f0f4ff;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid rgb(225, 198, 225);
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 42px;
+}
+
+.hero h1 {
+    font-size: 6.5rem;
+    color: black;
+    max-width: 1000px;
+    margin-bottom: 24px;
+    line-height: 1.0;
+    margin-top: 10px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin-bottom: 56px;
+    font-weight: 400;
+}
+
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.btn-cta {
+    background-color: #000000;
+    color: white;
+    padding: 20px 48px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-cta:hover {
+    background-color: #333333;
+}
+
+
+.link-action {
+    color: black;
+    text-decoration: none;
+    font-weight: 650;
+    font-size: 1.1rem;
+}
+
+.link-action:hover {
+    color: var(--text-muted);
+}
+
+
+/* Floating Cards Simplified Styling*/
+.floating-card {
+    position: absolute;
+    width: 320px;
+    background-color: #ffffff;
+    padding: 14px;
+    border-radius: 36px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.floating-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;     /* It will make our image of square shape now. It means the element’s width and height are equal → it will always be a perfect square, no matter the size. The browser automatically calculates the missing dimension (width or height) based on the ratio.*/
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: #f8faff;
+}
+
+
+.card-label {
+    display: none;
+}
+
+.card-left {
+    left: 40px;
+    top: 45%
+}
+
+.card-right {
+    right: 40px;
+    bottom: 25%;
+}
